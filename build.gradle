@@ -1,3 +1,5 @@
+import org.flywaydb.gradle.task.FlywayMigrateTask
+
 plugins {
     id "java"
     id "org.springframework.boot" version "1.5.4.RELEASE"
@@ -37,6 +39,6 @@ flyway {
     locations = ["filesystem:databases/tracker/migrations"]
 }
 
-/*task testMigrate(type: FlywayMigrateTask) {
+task testMigrate(type: FlywayMigrateTask) {
     url = testDbUrl
-}*/
+}
